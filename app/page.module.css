@@ -1,0 +1,910 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111111;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+
+  top: 20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 9999;
+
+  width: fit-content;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  padding: 14px 32px;
+
+  border-radius: 999px;
+
+  background: rgba(17, 17, 17, 0.95);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+}
+
+.logo {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: .3s;
+}
+
+.navLinks a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 2px;
+
+  background: white;
+
+  transition: .3s;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  max-width: 1200px;
+  min-height: 80vh;
+  margin: auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+.motto {
+  font-size: 1.1rem;
+  font-style: italic; /* เอียงเล็กน้อยเพื่อให้ดูเป็นคำคม */
+  color: #4b5563;     /* สีเทาเข้มเพื่อให้ดูสบายตา */
+  margin-top: -5px;   /* ดึงให้ใกล้กับชื่อขึ้นอีกนิด */
+  margin-bottom: 20px;
+  font-weight: 300;
+  margin-left: 20px;
+}
+
+.avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;          /* ตัดส่วนเกินทิ้ง */
+  position: relative;
+  isolation: isolate;        /* บังคับให้ทุกอย่างที่อยู่ข้างในต้องอยู่ในกรอบวงกลมนี้เท่านั้น */
+}
+.avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+}
+
+.heroText {
+  color: black;
+  font-style: italic;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.1;
+}
+
+.heroSubtitle {
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 12px 28px;
+  border: 2px solid #111;
+  border-radius: 999px;
+  background: transparent;
+  transition: .3s;
+}
+
+.button:hover {
+  background: #111;
+  color: white;
+}
+
+.resumeButton {
+  padding: 12px 28px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #111;
+  color: white;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+}
+
+.resumeButton:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+.contactButton {
+  padding: 12px 28px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+
+  background: #f3f4f6;
+  color: #111;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+}
+
+.contactButton:hover {
+  background: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+.aboutSection {
+  max-width: 1200px;
+
+  margin: 120px auto;
+
+  padding: 50px;
+
+  border-radius: 28px;
+
+  background: #fafafa;
+
+  border: 1px solid #ececec;
+
+  display: flex;
+
+  gap: 80px;
+}
+
+.aboutContent {
+  flex: 1;
+  color: black;
+}
+
+.sectionTitle {
+  margin-bottom: 16px;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.description {
+  max-width: 500px;
+  line-height: 1.6;
+  color: black;
+}
+
+.techStack {
+  margin-top: 50px;
+}
+
+
+.stackRow {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.stackRow span:first-child {
+  font-weight: 600;
+  color: #444;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  color: black;
+}
+
+.imagePlaceholder {
+  width: 256px;
+  height: 320px;
+  background: #d1d5db;
+}
+.experienceSection {
+  max-width: 1200px;
+  margin: 150px auto;
+  padding: 0 24px;
+  scroll-margin-top: 120px;
+}
+
+.sectionHeader span {
+  color: #888;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sectionHeader {
+  margin-bottom: 40px;
+}
+
+.sectionHeader h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.experienceCard {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+
+  gap: 60px;
+
+  padding: 50px;
+
+  border-radius: 28px;
+
+  background: #fafafa;
+  border: 1px solid #ececec;
+}
+
+.experienceImage {
+  width: 100%;
+}
+
+.experienceImage img {
+  width: 100%;
+  height: 320px;
+
+  object-fit: cover;
+  border-radius: 24px;
+}
+.experienceTop {
+  margin-bottom: 20px;
+}
+
+.experienceTop span {
+  padding: 8px 16px;
+
+  border-radius: 999px;
+
+  background: #111;
+  color: white;
+
+  font-size: 14px;
+}
+.experienceBadge {
+  min-width: 140px;
+
+  height: fit-content;
+
+  padding: 10px 20px;
+
+  border-radius: 999px;
+
+  background: black;
+  color: white;
+
+  text-align: center;
+}
+
+.experienceInfo h3 {
+  font-size: 2rem;
+  font-weight: 600;
+
+  margin-bottom: 5px;
+}
+
+.experienceContent {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+}
+
+.jobTitle {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.company {
+  color: #666;
+  font-size: 1.1rem;
+
+  margin-bottom: 30px;
+}
+
+.duration {
+  margin-top: 4px;
+  margin-bottom: 24px;
+}
+
+.bulletList {
+  gap: 18px;
+  line-height: 1.8;
+}
+
+.projectSection {
+  scroll-margin-top: 120px;
+  max-width: 1200px;
+  margin: 150px auto;
+  padding: 0 24px;
+}
+
+.sectionTitleCenter {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 40px;
+}
+
+.projectCard {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+
+  gap: 40px;
+
+  padding: 30px;
+
+  margin-bottom: 30px;
+
+  background: white;
+
+  border-radius: 24px;
+
+  border: 1px solid #ececec;
+
+  transition: all .3s ease;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.05);
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.12);
+}
+
+.projectImage {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 18px;
+  object-fit: cover; /* สำคัญ: ช่วยให้รูปไม่บิดเบี้ยว แม้รูปจะมีสัดส่วนไม่เท่ากัน */
+  display: block;    /* ช่วยลดช่องว่างใต้รูป */
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectActions {
+  margin-top: auto;
+
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 12px;
+}
+.projectTitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom: 20px;
+}
+
+.projectInfo p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.grayButton {
+  padding: 10px 20px;
+
+  border-radius: 999px;
+
+  border: none;
+
+  background: #111;
+
+  color: white;
+
+  transition: .3s;
+}
+
+.grayButton:hover {
+  background: #939393;
+}
+
+.primaryButton {
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #111;
+  color: white;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px);
+
+  background: #111;
+
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.1),
+    0 10px 30px rgba(0,0,0,.25),
+    0 0 30px rgba(255,255,255,.15);
+}
+.secondaryButton {
+  padding: 12px 24px;
+
+  border-radius: 999px;
+
+  border: 1px solid #111;
+
+  background: white;
+
+  color: #111;
+
+  transition: all .3s ease;
+}
+
+.secondaryButton:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-2px); /* เอฟเฟกต์ยกตัวเล็กน้อยเวลาเอาเมาส์วาง */
+}
+
+.techIcons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.techIcons span {
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background: #f5f5f5;
+
+  border: 1px solid #ececec;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+.footer {
+  background: radial-gradient(circle at top, #1a1a1a, #0a0a0a);
+  color: white;
+  padding: 80px 24px 30px;
+  margin-top: 150px;
+}
+
+.footerContainer {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.footerLeft {
+  flex: 1;
+}
+
+.footerTag {
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.footerTitle {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.footerText {
+  color: #bbb;
+  max-width: 320px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 14px;
+}
+
+.socialLinks a {
+  color: white;
+  transition: 0.3s;
+}
+
+.socialLinks a:hover {
+  transform: translateY(-3px);
+  opacity: 0.7;
+}
+
+/* divider */
+.footerDivider {
+  width: 1px;
+  height: 200px;
+  background: rgba(255,255,255,0.15);
+}
+
+/* right side */
+.footerRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 14px 16px;
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(10px);
+}
+
+.iconBox {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+}
+
+.label {
+  font-size: 11px;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+.value {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* bottom bar */
+.footerBottom {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+
+  display: flex;
+  justify-content: space-between;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+
+  font-size: 12px;
+  color: #888;
+}
+.githubContainer {
+  position: relative; /* สำคัญ: เพื่อให้เมนูอ้างอิงตำแหน่งจากปุ่ม */
+  display: inline-block;
+}
+
+.dropdownLinks {
+  position: absolute;
+  top: 110%; /* ขยับลงมาให้มีระยะห่าง */
+  left: 0;
+  width: 200px; /* ปรับความกว้างให้ดูเต็มตา */
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 8px 0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  animation: slideDown 0.2s ease-out;
+}
+
+.dropdownLinks a {
+  padding: 12px 20px;
+  color: #374151;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.dropdownLinks a:hover {
+  background-color: #f3f4f6;
+  color: #111;
+  padding-left: 25px; /* เพิ่มลูกเล่นตอน hover */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* มืดลงเล็กน้อยเพื่อเน้น Popup */
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* บังทุกอย่างบนหน้าเว็บ รวมถึง Navbar */
+  padding: 20px;
+}
+
+.popup {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* เงาฟุ้งๆ ให้ดูมีมิติ */
+}
+
+.popupHeader h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f3f4f6; /* ขีดเส้นใต้หัวข้อเบาๆ */
+  padding-bottom: 10px;
+  color: #111;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px; right: 20px;
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.eduContent img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.downloadButton {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #111;
+  color: white;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.downloadButton:hover {
+  background: #333;
+}
+
+.eduTitle {
+  margin-bottom: 5px;
+  color: #1f2937;
+}
+
+.eduInfo {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+
+
+.eduInfo h3 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #000;
+}
+
+.faculty { color: #666; font-size: 0.95rem; }
+.major { font-weight: 700; color: #000; }
+.year { font-size: 0.85rem; color: #888; font-style: italic; }
+
+.transcriptImage {
+  border-radius: 12px;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease;
+  
+  /* เพิ่มส่วนนี้ครับ */
+  display: block;   /* เปลี่ยนจาก inline เป็น block */
+  margin: 0 auto;  /* ขยับซ้าย-ขวาให้เท่ากัน (กึ่งกลาง) */
+}
+
+.transcriptImage:hover {
+  transform: scale(1.02); /* เอฟเฟกต์รูปขยายตัวนิดๆ เวลาเอาเมาส์วาง */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+
+  .navContainer {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    min-height: auto;
+    padding-top: 60px;
+  }
+
+  .heroTitle {
+  font-size: 3rem;
+}
+
+  .avatar {
+    width: 220px;
+    height: 220px;
+  }
+
+  .aboutSection {
+    background: #f7f7f7;
+
+    padding: 60px;
+
+    border-radius: 30px;
+
+    margin-top: 100px;
+  }
+
+  .experienceContent {
+    flex-direction: column;
+  }
+
+  .projectCard {
+  grid-template-columns: 1fr;
+}
+
+
+  .projectImage {
+    width: 100%;
+  }
+
+  .footerContainer {
+  flex-direction: column;
+  text-align: center;
+}
+
+  .footerDivider {
+    display: none;
+  }
+
+  .stackRow {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .buttonGroup {
+    justify-content: center;
+  }
+  .projectCard,
+  .aboutSection,
+  .experienceCard {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projectImage {
+    width: 100%;
+  }
+
+  .stackRow {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionTitleCenter {
+    font-size: 2.2rem;
+  }
+  .experienceCard {
+    grid-template-columns: 1fr;
+  }
+
+  .experienceImage img {
+    height: 220px;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footerInfo {
+    align-items: center;
+    text-align: center;
+  }
+}
