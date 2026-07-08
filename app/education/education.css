@@ -1,0 +1,94 @@
+.education-container {
+  max-width: 1200px; /* ขยายให้กว้างขึ้นเป็นพิเศษ */
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.back-button {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.back-button:hover {
+  color: #ffffff;
+}
+
+.edu-content {
+  margin-top: 40px;
+  text-align: center; /* จัดทุกอย่างให้อยู่กึ่งกลาง */
+}
+
+.edu-card {
+  background: transparent; /* พื้นหลังโปร่งใสไปเลย */
+  padding: 0;
+  border: none; /* ไม่มีขอบ */
+  box-shadow: none; /* ไม่มีเงา */
+}
+.edu-image {
+  padding: 20px;
+  background: #111111;
+  border-radius: 32px;
+  margin-bottom: 30px;
+  
+  /* เพิ่มส่วนนี้เพื่อปรับขนาดรูปให้เล็กลง */
+  max-width: 1000px; /* ปรับค่านี้ให้เล็กหรือใหญ่ตามต้องการ (เช่น 500px, 600px) */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edu-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px; /* ขอบรูปภาพด้านในมนกว่านิดหน่อย */
+  display: block;
+}
+
+.edu-image img:hover {
+  transform: translateY(-5px); /* ให้ขยับขึ้นเล็กน้อยเวลาเมาส์วางเหมือนหน้า Resume */
+}
+
+.edu-text {
+  padding: 60px; /* ให้ข้อความอยู่ภายใน Card แต่ไม่ชิดรูปจนเกินไป */
+  text-align: center;
+}
+
+.edu-text h2 {
+  font-size: 2.5rem; /* ขยายขนาดหัวข้อ */
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.degree {
+  font-size: 1.3rem;
+  color: #60a5fa;
+  margin-bottom: 10px;
+}
+
+.details {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  line-height: 1.8;
+  max-width: 700px; /* คุมความกว้างข้อความให้อ่านง่าย */
+  margin: 20px auto 40px;
+}
+
+/* ปุ่มอยู่ด้านล่างสุดและดูพรีเมียม */
+.download-button {
+  display: inline-block;
+  background: #ffffff;
+  color: #000000;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+}
+
+.download-button:hover {
+  background: #60a5fa;
+  color: #ffffff;
+  transform: scale(1.05);
+}

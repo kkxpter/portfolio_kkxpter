@@ -8,7 +8,6 @@ import {
 
 import styles from "./page.module.css";
 import Image from 'next/image';
-import router from 'next/router';
 import Link from 'next/link';
 export default function Home() {
   const [showLinks, setShowLinks] = useState(false);
@@ -65,13 +64,17 @@ export default function Home() {
           </p>
 
           <div className={styles.buttonGroup}>
-            <button className={styles.resumeButton}>
-              Resume
-            </button>
+            <Link href="/resume">
+              <button className={styles.resumeButton}>
+                Resume
+              </button>
+            </Link>
 
-            <button className={styles.secondaryButton} onClick={() => setShowEducation(true)}>
-              Education
-            </button>
+            <Link href="/education">
+              <button className={styles.secondaryButton}>
+                Education
+              </button>
+            </Link>
           </div>
         </div>
       </section>

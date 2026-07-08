@@ -1,0 +1,69 @@
+.resume-container {
+  max-width: 1000px; /* เพิ่มความกว้างจาก 800px เป็น 1000px เพื่อให้รูปใหญ่ขึ้น */
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ปรับปุ่ม Back ให้เป็นสีขาว สไตล์มินิมอล */
+.back-button {
+  align-self: flex-start;
+  color: white; /* เปลี่ยนตัวหนังสือเป็นสีขาว */
+  background-color: rgba(255, 255, 255, 0.1); /* พื้นหลังสีขาวโปร่งแสง */
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* มีขอบบางๆ ให้ดูหรู */
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: white;
+  color: #1f2937; /* เปลี่ยนเป็นสีเข้มตอนเอาเมาส์วาง */
+}
+
+/* ส่วนแสดงรูป */
+.resume-viewer {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* เงาเข้มขึ้นให้ดูมีมิติ */
+  border: 1px solid #e5e7eb;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.resume-viewer img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.download-button {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8); /* ไล่เฉดสีฟ้าเข้ม */
+  color: white;
+  padding: 16px 40px;
+  border-radius: 12px; /* ขอบโค้งมนที่ดูทันสมัย */
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase; /* ตัวพิมพ์ใหญ่ดูเป็นทางการ */
+  letter-spacing: 0.05em; /* เพิ่มระยะห่างตัวอักษรนิดหน่อย */
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* ความนุ่มนวลแบบพิเศษ */
+}
+
+.download-button:hover {
+  transform: scale(1.05); /* ขยายใหญ่ขึ้นเล็กน้อยเมื่อวางเมาส์ */
+  box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.4); /* เงาฟุ้งขึ้น */
+  background: linear-gradient(135deg, #1d4ed8, #1e40af); /* เฉดสีเข้มขึ้น */
+}
+
+.download-button:active {
+  transform: scale(0.98); /* กดลงไปนิดนึงตอนคลิก */
+}
