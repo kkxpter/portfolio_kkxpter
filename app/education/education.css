@@ -27,21 +27,25 @@
   box-shadow: none; /* ไม่มีเงา */
 }
 .edu-image {
-  padding: 20px;
   background: #111111;
-  border-radius: 32px;
-  margin-bottom: 30px;
-  
-  /* เพิ่มส่วนนี้เพื่อปรับขนาดรูปให้เล็กลง */
-  max-width: 1000px; /* ปรับค่านี้ให้เล็กหรือใหญ่ตามต้องการ (เช่น 500px, 600px) */
-  margin-left: auto;
-  margin-right: auto;
+  padding: 15px; /* ลด Padding ลงเพื่อให้รูปขยายตัวได้มากขึ้น */
+  border-radius: 20px;
+  transition: transform 0.3s ease;
 }
-
+.edu-image-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* แบ่ง 2 ฝั่งเท่ากัน */
+  gap: 30px; /* เพิ่มระยะห่างระหว่างรูปให้ดูสะอาดตา */
+  margin-bottom: 40px;
+  width: 100%;
+}
+.edu-image:hover {
+  transform: scale(1.40);
+}
 .edu-image img {
   width: 100%;
   height: auto;
-  border-radius: 20px; /* ขอบรูปภาพด้านในมนกว่านิดหน่อย */
+  border-radius: 12px;
   display: block;
 }
 

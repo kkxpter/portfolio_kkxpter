@@ -8,9 +8,14 @@ export default function EducationPage() {
 
       <div className="edu-content">
         <div className="edu-card">
-            <div className="edu-image">
-                <img src="/resume.png" alt="Profile" />
-            </div>
+            <div className="edu-image-gallery">
+              <div className="edu-image">
+                  <img src="/tran1.jpg" alt="Transcript Part 1" />
+                </div>
+                <div className="edu-image">
+                  <img src="/tran2.jpg" alt="Transcript Part 2" />
+                </div>
+              </div>
             <div className="edu-text">
                 <h2>Mahasarakham University</h2>
                 <p className="degree">Bachelor of Science in Computer Science</p>
@@ -21,7 +26,7 @@ export default function EducationPage() {
                 </p>
 
                 {/* ปุ่มย้ายมาอยู่ด้านล่างสุดของ Card */}
-                <a href="/Resume_Thirapat_Nobparat.pdf" download className="download-button">
+                <a href="/transcript_thirapat.pdf" download className="download-button">
                 Download Official Transcript
                 </a>
             </div>
